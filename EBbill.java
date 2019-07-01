@@ -3,14 +3,31 @@ import java.text.*;
 public class EBbill
 {
 	public static void main(String[] args) {
-	    String str1 = "Jan 1, 2020: shop1 320$shop2 220$shop3 330$shop4 420$shop5 5";
-      String str2 = "Jan 2, 2020: shop5 318$shop4 320$shop3 330$shop2 420$shop1 5";
-      String str3 = "Jan 3, 2020: shop1 316$shop1 820$shop3 330$shop4 420$shop5 5";
-      String str4 = str1+"^"+str2+"^"+str3;
-
+	    Scanner sc = new Scanner(System.in);
+	    int noOfDays = sc.nextInt();
+// 	     String str1 = "Jan 1, 2020: shop1 320$shop2 220$shop3 330$shop4 420$shop5 5";
+//       String str2 = "Jan 2, 2020: shop5 318$shop4 320$shop3 330$shop2 420$shop1 5";
+//       String str3 = "Jan 3, 2020: shop1 316$shop1 820$shop3 330$shop4 420$shop5 5";
+//       String str4 = str1+"^"+str2+"^"+str3;
+        String[] str = new String[noOfDays+1];
+        
+        // Initialing a Empty String to Add all substrings
+        
+        String s = "";
+    
+        for(int i = 0; i < str.length ;i++){
+            str[i] = sc.nextLine();
+            if(i != str.length - 1){
+                str[i] += "^";
+            }
+        }
+        
+        for(int i = 1; i < str.length ;i++){
+            s += str[i];
+        }
           //Splitting according to Days
 
-      String[] days = str4.split("\\^");
+      String[] days = s.split("\\^");
 
       HashMap<String,Integer> hm = new HashMap<>();
 
