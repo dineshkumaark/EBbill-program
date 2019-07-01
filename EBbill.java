@@ -14,7 +14,9 @@ public class EBbill
         // Initialing a Empty String to Add all substrings
         
         String s = "";
-    
+        
+        //Getting Input from User 
+        
         for(int i = 0; i < str.length ;i++){
             str[i] = sc.nextLine();
             if(i != str.length - 1){
@@ -45,6 +47,7 @@ public class EBbill
           String[] shop = shops.split("\\$");
 
            for(String name : shop){
+               
           // Extracting individual shops by splitting with space
 
                String[] shp = name.split(" ");
