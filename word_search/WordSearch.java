@@ -32,7 +32,7 @@ public class WordSearch {
       return isFound;      
       }
     public static void main(String[] args) {
-    // char[][] grid = {{'A','B','C'},{'S','F','C','S'},{'A','D','E','E'}};
+    // char[][] grid = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
     // String word = "SEE";
     Scanner sc = new Scanner(System.in);
     int size = sc.nextInt();
